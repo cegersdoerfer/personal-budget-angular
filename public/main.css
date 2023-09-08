@@ -111,3 +111,7 @@ main article {
 .blueAlert {
     color: blue;
 }
+
+.accessText{
+    font-size: 1.2em;
+}
