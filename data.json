@@ -3,39 +3,48 @@
     [
         {
             "title": "Eat out",
-            "budget": 25
+            "budget": 25,
+            "color": "#ffcd56"
         },
         {
             "title": "Rent",
-            "budget": 275
+            "budget": 275,
+            "color": "#ff6384"
         },
         {
             "title": "Grocery",
-            "budget": 110
+            "budget": 110,
+            "color": "#36a2eb"
         },
         {
             "title": "Gas",
-            "budget": 50
+            "budget": 50,
+            "color": "#fd6b19"
         },
         {
             "title": "Car Insurance",
-            "budget": 100
+            "budget": 100,
+            "color": "#FF0000"
         },
         {
             "title": "Internet",
-            "budget": 50
+            "budget": 50,
+            "color": "#808080"
         },
         {
             "title": "Electric",
-            "budget": 100
+            "budget": 100,
+            "color": "#00ffff"
         },
         {
             "title": "Water",
-            "budget": 50
+            "budget": 50,
+            "color": "#0000ff"
         },
         {
             "title": "Savings",
-            "budget": 100
+            "budget": 100,
+            "color": "#00ff00"
         }
     ]
 }
