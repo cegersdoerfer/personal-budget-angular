@@ -1,0 +1,41 @@
+{
+    "myBudget":
+    [
+        {
+            "title": "Eat out",
+            "budget": 25
+        },
+        {
+            "title": "Rent",
+            "budget": 275
+        },
+        {
+            "title": "Grocery",
+            "budget": 110
+        },
+        {
+            "title": "Gas",
+            "budget": 50
+        },
+        {
+            "title": "Car Insurance",
+            "budget": 100
+        },
+        {
+            "title": "Internet",
+            "budget": 50
+        },
+        {
+            "title": "Electric",
+            "budget": 100
+        },
+        {
+            "title": "Water",
+            "budget": 50
+        },
+        {
+            "title": "Savings",
+            "budget": 100
+        }
+    ]
+}
