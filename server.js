@@ -29,6 +29,8 @@ app.get('/budget', (req, res) => {
     res.json(budget);
 });
 
+app.use('/', express.static('public'));
+
 app.listen(port, () => {
     console.log(`API served at http://localhost:${port}`);
 });

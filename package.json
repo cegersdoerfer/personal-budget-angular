@@ -15,11 +15,12 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fabionolasco/personal-budget/issues"
+    "url": "https://github.com/cegersdoerfer/personal-budget/issues"
   },
-  "homepage": "https://github.com/fabionolasco/personal-budget#readme",
+  "homepage": "https://github.com/cegersdoerfer/personal-budget#readme",
   "dependencies": {
+    "axios": "^1.5.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.18.2"
   }
 }
