@@ -2,6 +2,7 @@ import { Component, AfterViewInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Chart } from 'chart.js/auto';
 
+
 @Component({
   selector: 'pb-homepage',
   templateUrl: './homepage.component.html',
@@ -45,6 +46,15 @@ export class HomepageComponent implements AfterViewInit{
       }
       this.createChart();
       });
+
+
+    fetch('../../assets/js/d3Plot.js')
+    .then(res => res.text())
+    .then(body => {
+      var script = document.createElement('script');
+      script.innerHTML = body;
+      document.body.appendChild(script);
+    });
     }
 
     createChart() {
@@ -54,5 +64,7 @@ export class HomepageComponent implements AfterViewInit{
           data: this.dataSource
       });
     }
+
+
 
 }
