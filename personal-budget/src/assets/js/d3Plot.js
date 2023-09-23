@@ -33,25 +33,27 @@ var key = function(d){ return d.data.label; };
 var color;
 getBudgetData().then(function(data) {
     var data = data.myBudget;
+    var values = {};
     var titles = data.map(function(d) { return d.title; });
-    console.log(titles);
     var colors = data.map(function(d) { return d.color; });
-    console.log(colors);
-    return { titles, colors };
+    // values should be a dictionary of title: value
+    data.forEach(function(d) {
+        values[d.title] = d.budget;
+    });
+    return { titles, colors, values};
     }
     ).then(function(result) {
         var titles = result.titles;
         var colors = result.colors;
-        console.log(titles);
-        console.log(colors);
+        var values = result.values;
         color = d3.scale.ordinal()
         .domain(titles)
         .range(colors);
-        return color;
-    }).then(function(color) {
-        console.log(color);
-        var data = getData();
-        console.log(data);
+        return { color: color, values: values };
+    }).then(function(result) {
+        var color = result.color;
+        var values = result.values;
+        var data = getData(values);
         change(data);
     }
     ).catch(function(err) {
@@ -63,7 +65,6 @@ getBudgetData().then(function(data) {
 function getBudgetData (){
     return fetch('http://localhost:3000/budget')
     .then(function (res) {
-        console.log(res);
         return res.json();
     })
     .catch(function (err) {
@@ -71,10 +72,11 @@ function getBudgetData (){
     });
 }
 
-function getData (){
+function getData (values){
 	var labels = color.domain();
+  var values = values;
 	return labels.map(function(label){
-		return { label: label, value: Math.random() }
+		return { label: label, value: values[label] }
 	});
 }
 
